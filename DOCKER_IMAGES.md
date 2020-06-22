@@ -57,4 +57,43 @@ docker logout
 
 in order to upload an image we must login to the docker hub and push the already created image with tag command
 
+
+```
 docker image push myusername/myimage
+
+```
+
+### create a new image 
+
+Use a dockerfile to create a new image, see dockerfile-sample1 dockerfile example
+
+```
+docker image build -t customnginx
+```
+
+
+
+## Prun images to keep system clean
+
+### image prune
+
+clean up just 'dangling' images
+```
+docker image prune
+```
+
+### system prune
+
+clean up everything
+
+```
+docker system prune 
+```
+
+### image prune -a
+
+clean up all images that aren't used
+
+```
+docker image prune -a
+```
